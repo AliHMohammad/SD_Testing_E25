@@ -1,0 +1,46 @@
+import { Calculator } from "./Calculator.js";
+import { describe, test, expect } from "vitest";
+
+describe("Test the sum method of the Calculator class", () => {
+    test("Should return correct sum", () => {
+        expect(Calculator.sum(2, 6)).toBe(8);
+    });
+
+    test("should return correct sum when negative number", () => {
+        expect(Calculator.sum(7, -3)).toBe(4);
+    });
+});
+
+describe("Test the subtract method of the Calculator class", () => {
+    test("should return correct result", () => {
+        expect(Calculator.subtract(4, 4)).toBe(0);
+    });
+
+    test("should return negative number", () => {
+        expect(Calculator.subtract(4, 8)).toBe(-4);
+    });
+});
+
+describe("group for multiply method of the Calculator class", () => {
+    test("should return correct result", () => {
+        expect(Calculator.multiply(2, 5)).toBe(10);
+    });
+
+    test("should return negative result if one of params is negative", () => {
+        expect(Calculator.multiply(5, -4)).toBe(-20);
+    });
+});
+
+describe("group for divide method of the Calculator class", () => {
+    test("should return correct result", () => {
+        expect(Calculator.divide(2, 2)).toBe(1);
+    });
+
+    test("should return a fraction", () => {
+        expect(Calculator.divide(2, 4)).toBe(0.5);
+    });
+
+    test("should return negative number", () => {
+        expect(Calculator.divide(4, -2)).toBe(-2);
+    });
+});
