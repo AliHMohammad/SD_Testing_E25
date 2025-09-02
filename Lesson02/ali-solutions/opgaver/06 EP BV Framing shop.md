@@ -7,4 +7,34 @@ Use black-box analysis to identify a comprehensive series of test cases:
 3. Write down the full resulting list of test case values
 4. Implement the discount calculation function in code and write the corresponding unit tests in the language and unit test framework of your choice
 
-<sub>Adapted from Stapp, Lucjan, Roman, Adam, and Michaël Pilaeten (2024). _ISTQB Certified Tester Foundation Level: A Self-Study Guide Syllabus v4.0_. Springer.</sub>
+
+----
+
+Width:
+
+| Partition type | Partitions        | Test case values | Expected output | Boundary values | Test case values |
+|----------------|-------------------|------------------|-----------------|-----------------|------------------|
+| Invalid        | MINUS INFINITY- -1| -10              | Error           | -1              | -2, -1, 0        |
+| Invalid        | 0                 | 0                | Error           | --              | --               |
+| Invalid        | 1-29               | 15               | Error          | 1, 29            | 0, 1, 2, 28, 29, 30    |
+| Invalid        | 101-INFINITY       | 150               | Error          | 101              | 100, 101, 102       |
+| Valid          | 30-100              | 60               | --            | 30, 100           | 29, 30, 31, 99, 100, 101 |
+
+
+Height:
+
+| Partition type | Partitions        | Test case values | Expected output | Boundary values | Test case values |
+|----------------|-------------------|------------------|-----------------|-----------------|------------------|
+| Invalid        | MINUS INFINITY- -1| -10              | Error           | -1              | -2, -1, 0        |
+| Invalid        | 0                 | 0                | Error           | --              | --               |
+| Invalid        | 1-29               | 15               | Error          | 1, 29            | 0, 1, 2, 28, 29, 30    |
+| Invalid        | 61-INFINITY       | 120               | Error          | 61              | 60, 61, 62       |
+| Valid          | 30-60              | 45                | --            | 30, 60           | 29, 30, 31, 59, 60, 61 |
+
+
+Surface:
+
+| Partition type | Partitions        | Test case values | Expected output | Boundary values   | Test case values           |
+|----------------|-------------------|------------------|-----------------|-----------------|------------------|
+| Valid          | 0-1600            | 800              | 3000            | 0, 1600           | -1, 0, 1, 1599, 1600, 1601 |
+| Valid          | 1601-INFINITY     | 2000             | 3500            | 160½              | 1600, 1601, 1602           |

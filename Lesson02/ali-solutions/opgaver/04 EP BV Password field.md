@@ -13,6 +13,7 @@ Svar på alle 3
 
 | Partition type | Partitions        | Test case values | Expected output | Boundary values | Test case values |
 |----------------|-------------------|------------------|-----------------|-----------------|------------------|
-| Invalid        | 0-5               | 3                | false           | 0, 5            | 0, 1, 4, 5, 6    |
+| Invalid        | 1-5               | 3                | false           | 1, 5            | 0, 1, 2, 4, 5, 6 |
+| Invalid        | 0                 | 0                | false           |  --             | --               |
 | Invalid        | 11-INFINITY       | 20               | false           | 11              | 10, 11, 12       |
 | Valid          | 5-10              | 7                | true            | 5, 10           | 4, 5, 6, 9, 10, 11 |

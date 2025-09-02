@@ -37,6 +37,7 @@ describe('e-shop discount group', () => {
     it.each([
         0,
         -0.01,
+        -0.02
         -1,
         -100,
     ])("should throw error", (purchase: number) => {
