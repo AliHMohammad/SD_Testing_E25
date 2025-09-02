@@ -12,6 +12,10 @@ export class Calculator {
     }
 
     public static divide(numberOne: number, numberTwo: number) {
+        if (!numberTwo) 
+            throw new Error();
+        
+
         return numberOne / numberTwo;
     }
 }

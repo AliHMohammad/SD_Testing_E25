@@ -43,4 +43,8 @@ describe("group for divide method of the Calculator class", () => {
     test("should return negative number", () => {
         expect(Calculator.divide(4, -2)).toBe(-2);
     });
+
+    test("should fail when dividing by zero", () => {
+        expect(() => Calculator.divide(4, 0)).toThrowError();
+    });
 });
