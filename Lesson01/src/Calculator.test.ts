@@ -9,6 +9,10 @@ describe("Test the sum method of the Calculator class", () => {
     test("should return correct sum when negative number", () => {
         expect(Calculator.sum(7, -3)).toBe(4);
     });
+
+    test('should be close to', () => {
+        expect(Calculator.sum(3.4, 4.5)).toBeCloseTo(7.9)
+    })
 });
 
 describe("Test the subtract method of the Calculator class", () => {
@@ -45,6 +49,7 @@ describe("group for divide method of the Calculator class", () => {
     });
 
     test("should fail when dividing by zero", () => {
-        expect(() => Calculator.divide(4, 0)).toThrowError();
+        expect(() => Calculator.divide(4, 0)).toThrow(Error);
+        expect(() => Calculator.divide(4, 0)).toThrow("Division by zero");
     });
 });
