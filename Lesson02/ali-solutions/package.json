@@ -1,0 +1,19 @@
+{
+  "name": "lesson01",
+  "version": "1.0.0",
+  "description": "[Testing - Autumn 2025](https://github.com/arturomorarioja-kea/SD_Testing_E25/blob/main/README.md)",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest --run",
+    "test:coverage": "vitest --run --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@vitest/coverage-v8": "^3.2.4",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
+  }
+}
