@@ -1,7 +1,16 @@
 import { Calculator } from "./Calculator.js";
-import { describe, test, expect } from "vitest";
+import { describe, test, expect, it } from "vitest";
 
 describe("Test the sum method of the Calculator class", () => {
+
+    // Parameterized testing example
+    it.each([
+        { a: 2, b: 6, expected: 8 },
+        { a: 7, b: -3, expected: 4 },
+    ])("should return $expected when adding $a and $b", ({ a, b, expected }) => {
+        expect(Calculator.sum(a, b)).toBe(expected);
+    });
+
     test("Should return correct sum", () => {
         expect(Calculator.sum(2, 6)).toBe(8);
     });
@@ -10,9 +19,9 @@ describe("Test the sum method of the Calculator class", () => {
         expect(Calculator.sum(7, -3)).toBe(4);
     });
 
-    test('should be close to', () => {
-        expect(Calculator.sum(3.4, 4.5)).toBeCloseTo(7.9)
-    })
+    test("should be close to", () => {
+        expect(Calculator.sum(3.4, 4.5)).toBeCloseTo(7.9);
+    });
 });
 
 describe("Test the subtract method of the Calculator class", () => {
