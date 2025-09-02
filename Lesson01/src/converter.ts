@@ -52,14 +52,14 @@ export function convertRomanToDecimal(roman: string): number | string {
         const nextVal: number = next ? getValue(next) : -1;
 
         if (!isValidRomanChar(curr)) {
-            return `Unknown roman number: ${curr}`;
+            throw Error(`Unknown roman number: ${curr}`);
         }
 
         // Check repetition rules
         if (curr === prevChar) {
             repeatCount++;
             if (!isValidRepetition(curr, repeatCount)) {
-                return `Invalid repetition of ${curr}`;
+                throw Error(`Invalid repetition of ${curr}`);
             }
         } else {
             repeatCount = 1;
@@ -69,11 +69,11 @@ export function convertRomanToDecimal(roman: string): number | string {
         if (next && nextVal > currVal) {
             // Only I, X, C can be subtractive
             if (!isSubtractive(curr, next)) {
-                return `Invalid subtractive pair: ${curr}${next}`;
+                throw Error(`Invalid subtractive pair: ${curr}${next}`);
             }
             // If previous char is same as current, and repeatCount > 1, it's invalid (e.g., 'IIX')
             if (repeatCount > 1) {
-                return `Invalid subtractive pattern: ${roman.slice(Math.max(0, i - repeatCount + 1), i + 2)}`;
+                throw Error(`Invalid subtractive pattern: ${roman.slice(Math.max(0, i - repeatCount + 1), i + 2)}`);
             }
             result += nextVal - currVal;
             i += 2;
@@ -87,7 +87,7 @@ export function convertRomanToDecimal(roman: string): number | string {
     }
 
     if (result > 3999) {
-        return "Value exceeds maximum representable Roman numeral (3999)";
+        throw Error("Value exceeds maximum representable Roman numeral (3999)");
     }
     return result;
 }
