@@ -1,4 +1,4 @@
-import { framePrice } from "./framePrice.js";
+import { framePrice } from "../src/framePrice.js";
 import { describe, it, expect } from "vitest";
 
 describe("e-shop discount group", () => {
