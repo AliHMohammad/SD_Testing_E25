@@ -1,6 +1,6 @@
-type TDepartment = "HR" | "Finance" | "IT" | "Sales" | "General Services";
+export type TDepartment = "HR" | "Finance" | "IT" | "Sales" | "General Services";
 
-enum EducationalLevel {
+export enum EducationalLevel {
     None = 0,
     Primary = 1,
     Secondary = 2,
@@ -23,7 +23,7 @@ export class Employee {
         department: TDepartment,
         baseSalary: number,
         educationalLevel: EducationalLevel,
-        dateofBirth: Date,
+        dateOfBirth: Date,
         dateOfEmployment: Date,
         country: string
     ) {
@@ -32,7 +32,7 @@ export class Employee {
         this.setDepartment(department);
         this.setBaseSalary(baseSalary);
         this.setEducationalLevel(educationalLevel);
-        this.setDateOfBirth(dateofBirth);
+        this.setDateOfBirth(dateOfBirth);
         this.setDateOfEmployment(dateOfEmployment);
         this.setCountry(country);
     }
@@ -72,7 +72,7 @@ export class Employee {
     setDateOfBirth(dob: Date) {
         const now = new Date();
         const difference = dob.getFullYear() - now.getFullYear();
-        if (difference < 18) {
+        if (difference > 18) {
             throw new Error();
         }
 
@@ -108,7 +108,7 @@ export class Employee {
     }
 
     get baseSalary(): number {
-        return this.baseSalary + this._educationalLevel * 1220;
+        return this._baseSalary + this._educationalLevel * 1220;
     }
 
     get dateOfBirth(): string {
