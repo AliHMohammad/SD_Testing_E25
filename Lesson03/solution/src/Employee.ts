@@ -71,8 +71,8 @@ export class Employee {
 
     setDateOfBirth(dob: Date) {
         const now = new Date();
-        const difference = dob.getFullYear() - now.getFullYear();
-        if (difference > 18) {
+        const difference = now.getFullYear() - dob.getFullYear();
+        if (difference < 18) {
             throw new Error();
         }
 
@@ -124,7 +124,10 @@ export class Employee {
     }
 
     getDiscount(): number {
-        return new Date(this.dateOfEmployment).getFullYear() * 0.5;
+        const currentYear = new Date().getFullYear();
+        const employmentYear = new Date(this.dateOfEmployment).getFullYear();
+
+        return (currentYear - employmentYear) * 0.5;
     }
 
     getShippingCosts(): number {
