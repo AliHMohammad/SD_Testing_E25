@@ -8,6 +8,7 @@ export enum EducationalLevel {
 }
 
 export class Employee {
+    _cpr!: string;
     _firstName!: string;
     _lastName!: string;
     _department!: TDepartment;
@@ -18,6 +19,7 @@ export class Employee {
     _country!: string;
 
     constructor(
+        cpr: string,
         firstName: string,
         lastName: string,
         department: TDepartment,
@@ -27,6 +29,7 @@ export class Employee {
         dateOfEmployment: Date,
         country: string
     ) {
+        this.setCPR(cpr);
         this.setFirstName(firstName);
         this.setLastName(lastName);
         this.setDepartment(department);
@@ -35,6 +38,13 @@ export class Employee {
         this.setDateOfBirth(dateOfBirth);
         this.setDateOfEmployment(dateOfEmployment);
         this.setCountry(country);
+    }
+
+    setCPR(cpr: string) {
+        if (cpr.length !== 10) {
+            throw new Error();
+        }
+        this._cpr = cpr;
     }
 
     setFirstName(firstName: string) {
@@ -93,6 +103,10 @@ export class Employee {
 
     get firstName(): string {
         return this._firstName;
+    }
+
+    get cpr(): string {
+        return this._cpr;
     }
 
     get lastName(): string {
