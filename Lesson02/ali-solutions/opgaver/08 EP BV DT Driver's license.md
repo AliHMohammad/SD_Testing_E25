@@ -12,7 +12,7 @@ Use black-box analysis to identify a comprehensive series of test cases:
 
 1. Create the corresponding decision table
 
-| Partition type           | R1  | R2  | R3  | R3  |
+| Partition type           | R1  | R2  | R3  | R4  |
 | ------------------------ | --- | --- | --- | --- |
 | **Conditions**           |     |     |     |     |
 | Atleast 85 points        | T   | F   | T   | F   |
@@ -24,6 +24,13 @@ Use black-box analysis to identify a comprehensive series of test cases:
 | Extra driving lessons    | N   | N   | N   | Y   |
 
 2. Write test cases based on the decision table
+
+|     | Th ex points | Pr ex errors | Rule |
+| --- | ------------ | ------------ | ---- |
+| 1   | 90           | 1            | R1   |
+| 2   | 50           | 2            | R2   |
+| 3   | 90           | 4            | R3   |
+| 4   | 50           | 4            | R4   |
 
 3. Identify the corresponding equivalence partitions
 
@@ -46,5 +53,9 @@ Practical test errors:
 4. Use 3-value boundary value analysis to identify further test cases
 
 5. Identify edge cases
+
+Points: `-1`, `101`, `MAX INTEGER`,
+Errors: `-1`, `MAX INTEGER`,
+
 6. List all test case values
 7. Implement in code a function that receives as parameters the number of points for the theory exam and the number of errors for the practical exam and that returns a data structure with four boolean properties: whether the driver's license is granted, whether the theory exam must be repeated, whether the practical exam must be repeated, and whether additional driving lessons must be taken. Write the corresponding unit tests based on the above analysis. Use the programming language and unit test framework of your choice
