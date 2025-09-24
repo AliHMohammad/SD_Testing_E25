@@ -1,4 +1,4 @@
-import { CurrencyAPI } from "./CurrencyAPI.js";
+import { CurrencyAPI } from "./utils/CurrencyAPI.js";
 
 export class CurrencyCalculator {
     private _API: CurrencyAPI;
@@ -17,14 +17,19 @@ export class CurrencyCalculator {
     }
 
     async convert(amount: number) {
-        // input tofixed 2
-        // try {
-            
-        // } catch (error) {
-        //     throw new Error(error)
-        // }
-        // return tofixed 2
+        if (amount < 0) {
+            throw new Error();
+        }
+
+        const currencies = await this._API.getCurrencies(this._currency);
+
+        let result = [];
+        for (const [k, v] of Object.entries(currencies.data)) {
+            const { code, value } = v;
+
+            result.push({ code, value: Number((value * amount).toFixed(2)) });
+        }
+
+        return result;
     }
 }
-
-
