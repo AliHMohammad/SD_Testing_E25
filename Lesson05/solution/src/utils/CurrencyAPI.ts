@@ -19,6 +19,11 @@ export class CurrencyAPI {
 
     async getCurrencies(currency: string): Promise<IResponse> {
         const response = await fetch(`https://api.currencyapi.com/v3/latest?apikey=${this._APIKey}&base_currency=${currency}`);
+
+        if (!response.ok) {
+            throw new Error();
+        }
+
         return await response.json();
     }
 }

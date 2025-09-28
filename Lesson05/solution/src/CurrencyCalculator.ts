@@ -21,15 +21,19 @@ export class CurrencyCalculator {
             throw new Error();
         }
 
-        const currencies = await this._API.getCurrencies(this._currency);
+        try {
+            const currencies = await this._API.getCurrencies(this._currency);
 
-        let result = [];
-        for (const [k, v] of Object.entries(currencies.data)) {
-            const { code, value } = v;
+            let result = [];
+            for (const [k, v] of Object.entries(currencies.data)) {
+                const { code, value } = v;
 
-            result.push({ code, value: Math.round(value * amount * 100) / 100 });
+                result.push({ code, value: Math.round(value * amount * 100) / 100 });
+            }
+
+            return result;
+        } catch (error) {
+            throw new Error();
         }
-
-        return result;
     }
 }
