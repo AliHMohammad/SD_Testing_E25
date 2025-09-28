@@ -4,7 +4,7 @@ export class CurrencyCalculator {
     private _API: CurrencyAPI;
     private _currency!: string;
 
-    constructor(currency: "string", API: CurrencyAPI) {
+    constructor(currency: string, API: CurrencyAPI) {
         this._API = API;
         this.setCurrency(currency);
     }
@@ -27,7 +27,7 @@ export class CurrencyCalculator {
         for (const [k, v] of Object.entries(currencies.data)) {
             const { code, value } = v;
 
-            result.push({ code, value: Number((value * amount).toFixed(2)) });
+            result.push({ code, value: Math.round(value * amount * 100) / 100 });
         }
 
         return result;

@@ -2,7 +2,11 @@ import { connection } from "./utils/database.js";
 import type { RowDataPacket } from "mysql2";
 
 export class GradeCalculator {
-    async convert(grade: string, country: "Denmark" | "USA"): Promise<string> {
+    async convert(grade: string, country: string): Promise<string> {
+        if (country !== "Denmark" && country !== "USA") {
+            throw new Error();
+        }
+
         const sourceColumn = `c${country}`;
         const targetColumn = country === "Denmark" ? "cUSA" : "cDenmark";
 

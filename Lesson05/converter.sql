@@ -30,5 +30,5 @@ INSERT INTO `grades` (`nGradeID`, `cDenmark`, `cUSA`) VALUES
 (3, '7', 'B'),
 (4, '4', 'C'),
 (5, '02', 'D'),
-(6, '00', 'F'),
+(6, '00', 'E'),
 (7, '-3', 'F');

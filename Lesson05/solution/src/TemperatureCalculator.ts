@@ -1,13 +1,16 @@
 export class TemperatureCalculator {
     private _value: number;
-    private _system: "Celcius" | "Fahrenheit" | "Kelvin";
+    private _system!: "Celcius" | "Fahrenheit" | "Kelvin";
 
-    constructor(value: number, system: "Celcius" | "Fahrenheit" | "Kelvin") {
+    constructor(value: number, system: string) {
         this._value = value;
-        this._system = system;
+        this.setSystem(system);
     }
 
-    convert(destinationSystem: "Celcius" | "Fahrenheit" | "Kelvin"): number {
+    convert(destinationSystem: string): number {
+        if (destinationSystem !== "Celcius" && destinationSystem !== "Fahrenheit" && destinationSystem !== "Kelvin") {
+            throw new Error();
+        }
         let result = 0;
 
         switch (this._system) {
@@ -32,11 +35,17 @@ export class TemperatureCalculator {
                     result = this.kelvinToCelcius(this._value);
                 }
                 break;
-            default:
-                break;
         }
-        
-        return Number(result.toFixed(2));
+
+        return Math.round(result * 100) / 100;
+    }
+
+    private setSystem(system: string) {
+        if (system !== "Celcius" && system !== "Fahrenheit" && system !== "Kelvin") {
+            throw new Error();
+        }
+
+        this._system = system;
     }
 
     private celciusToFahrenheit(celsius: number): number {

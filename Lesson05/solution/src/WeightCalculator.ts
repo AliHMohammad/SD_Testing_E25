@@ -1,14 +1,30 @@
 export class WeightCalculator {
-    private _value: number;
-    private _system: "Metric" | "Imperial";
+    private _value!: number;
+    private _system!: "Metric" | "Imperial";
 
-    constructor(value: number, system: "Metric" | "Imperial") {
-        this._value = value;
-        this._system = system;
+    constructor(value: number, system: string) {
+        this.setValue(value);
+        this.setSystem(system);
     }
 
     convert(): number {
         const result = this._system === "Metric" ? this._value / 2.21 : this._value * 2.21;
-        return Number(result.toFixed(2));
+        return Math.round(result * 100) / 100;
+    }
+
+    private setSystem(system: string) {
+        if (system !== "Metric" && system !== "Imperial") {
+            throw new Error();
+        }
+
+        this._system = system;
+    }
+
+    private setValue(value: number) {
+        if (value < 0) {
+            throw new Error();
+        }
+
+        this._value = value;
     }
 }
