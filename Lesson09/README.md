@@ -2,8 +2,6 @@
 
 # Lesson 9 - 4 November
 
-[  -> Add the in-class exercise as an example in an MD file]: #
-
 ## In-class exercises
 
 ### Risk Analysis
@@ -33,20 +31,12 @@ Work in groups of 5 or 6.
 - Elaborate the corresponding risk matrix
 - Upload them in a pdf, xlsx or docx document to our Teams group (folder Risk Analysis)
 
-[### Review]: #
-[Review the following software requirements specification:]: #
-
-[The application will consist of a data entry window and a data display window, which will obtain data from the former. It will include a printing option to print the information to a printer, pdf file, etc.]: #
-
-[The data entry window will require the user to input the following customer information: first name, surname, address, city, postal code, phone number, date of birth, and preferred display colour (red, yellow, violet…). If the latter shows that the customer is under 18 years old, the text “Under-aged” will be displayed, showing the text “Adult” if the customer is over 18 years old.]: #
-
-[Once the “Ok” button is clicked, the data display window will show all the information.]: #
-
 ## Class takeaways
 Check out the following slide decks on Itslearning:
 - **Test Management**, with especial attention to risk analysis
 - **Static Testing: Reviews**
   - Take a look to [this video](https://www.youtube.com/watch?v=JaJ_nNk3f1o) that illustrates a code review, too
+  - Check out this [review example](https://github.com/arturomorarioja-ek/SD_Testing_E25/blob/main/Lesson09/Review%20example.md)
 
 ## Homework
 
