@@ -14,6 +14,11 @@
 [  -> Start by showing them a Lighthouse report and ask whether they are familiar with the metrics]: #
 [  -> Use only the appropriate examples: https://github.com/arturomorarioja-ek/SD_Testing_E25_Materials/blob/main/Web%20Performance%20Testing/01%20Samples%20and%20Exercises.md]: #
 [-> Usability testing]: #
+[https://www.linkedin.com/posts/rahmah-lawal-3440971aa_designeducation-learning-uxdesign-activity-6996833008120958976-8r_n/?utm_source=share&utm_medium=member_desktop]: #
+[https://www.linkedin.com/posts/sahil-ali-salmani-b8751b176_ux-ui-research-activity-6997130778383929345--kBa/?utm_source=share&utm_medium=member_desktop]: #
+[https://www.linkedin.com/posts/suhaib-barham_ux-ui-research-activity-6996251066447065088-HhIL/?utm_source=share&utm_medium=member_desktop]: #
+[    but...]: #
+[https://www.linkedin.com/posts/activity-6863393904708878336-MXP6/?utm_source=share&utm_medium=member_desktop]: #
 
 [-> Exam & exam project]: #
 
