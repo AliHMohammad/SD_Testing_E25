@@ -4,8 +4,7 @@
 
 Use the following:
 - https://www.webpagetest.org/<br>
-Use a slow connection (3G from Mumbai)
-- https://testmysite.io/
+Use a slow connection from far away (3G from Asia)
 - https://tools.pingdom.com/<br>
 Test from "Pacific – Australia – Sydney"
 
