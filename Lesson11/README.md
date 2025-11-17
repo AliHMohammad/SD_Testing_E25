@@ -17,6 +17,9 @@
 
 [-> Exam & exam project]: #
 
+[## In-class exercise]: #
+[Web Performance Testing(https://github.com/arturomorarioja-ek/SD_Testing_E25/blob/main/Lesson11/01%20Web%20Performance%20Testing.md)]: #
+
 [## Exercise solution]: #
 [- TDD: Words (Python/Pytest(https://github.com/arturomorarioja/py_words) | JavaScript/Jest(https://github.com/arturomorarioja/js_words) | PHP/PHPUnit(https://github.com/arturomorarioja/php_words))]: #
 
