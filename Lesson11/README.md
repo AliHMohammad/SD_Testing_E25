@@ -5,7 +5,6 @@
 [-> TDD solution]: #
 [  -> If they did not do it, give them time in class]: #
 [-> SQLite example]: #
-[-> HA solution]: #
 
 [-> Have this one open: https://github.com/arturomorarioja-ek/SD_Testing_E25_Materials/edit/main/Web%20Performance%20Testing/01%20Samples%20and%20Exercises.md]: #
 
@@ -24,8 +23,8 @@
 ## In-class exercise
 [Web Performance Testing](https://github.com/arturomorarioja-ek/SD_Testing_E25/blob/main/Lesson11/01%20Web%20Performance%20Testing.md)
 
-[## Exercise solution]: #
-[- TDD: Words (Python/Pytest(https://github.com/arturomorarioja/py_words) | JavaScript/Jest(https://github.com/arturomorarioja/js_words) | PHP/PHPUnit(https://github.com/arturomorarioja/php_words))]: #
+## Exercise solution
+- TDD: Words ([Python/Pytest](https://github.com/arturomorarioja/py_words) | [JavaScript/Jest](https://github.com/arturomorarioja/js_words) | [PHP/PHPUnit](https://github.com/arturomorarioja/php_words))
 
 ## Class takeaways
 Check out the slide decks on the following:
